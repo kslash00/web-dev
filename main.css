@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    font-family: "Google Fonts", sans-serif;;
+}
+.header {
+    background-color: rgb(230, 208, 17);
+    color: rgb(255, 255, 255);
+}
+.container
+{
+    max-width: 75%;
+    margin: 0 auto;
+}
+.main-menu{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 20px 0px;
+
+}
+.main-menu a{
+    text-decoration: none; 
+    color: white;
+    margin-right: 10px;
+}
+main p{
+    text-align: justify;
+}
+
+.avatar{
+    height: 250px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    background-color: rgb(228, 178, 178);
+}
+.avatar img{
+    height: 100%;
+    padding: 0.2;
+}
+.footer {
+    background-color: rgb(230, 208, 17);
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+    margin-top: 3rem;
+}
