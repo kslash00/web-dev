@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    font-family: "Google Fonts", sans-serif;
+    background-color: rgb(252, 250, 144);
+}
+.header {
+    background-color: rgb(230, 208, 17);
+    color: rgb(0, 0, 0);
+}
+.container
+{
+    max-width: 75%;
+    margin: 0 auto;
+}
+.main-menu{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 20px 0px;
+
+}
+.main-menu a{
+    text-decoration: none; 
+    color: rgb(0, 0, 0);
+    margin-right: 10px;
+}
+main p{
+    text-align: justify;
+}
+
+.avatar{
+    height: 250px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    background-color: rgb(252, 250, 150);
+}
+.avatar img{
+    height: 100%;
+    padding: 0.2;
+}
+.sert {
+    width: 35%;
+    float: left;
+    padding: 20px 0;
+    margin: 0rem 3rem 0 0;
+    background-color: rgb(252, 250, 150);
+}
+.navi {
+    padding: 2rem 0 0 0;
+}
+.tech {
+    padding: 9rem 0 0 0;
+}
+.footer {
+    background-color: rgb(230, 208, 17);
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+    margin: 1rem 3rem 0 0;
+    margin-top: 2rem;
+}

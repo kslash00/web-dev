@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    font-family: "Google Fonts", sans-serif;
+    background-color: rgb(252, 250, 144);
+    background: url(front1.jpg) no-repeat;
+    background-size: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group{
+    margin-bottom: 10px;
+}
+
+.form-lable{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5 px;
+}
+
+.container{
+    font-size: 25px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+input, textarea, select {
+    font-size: inherit;
+}
+.btn {
+    display: block;
+    height: 40px;
+    width: 150px;
+    margin: 0 auto;
+    background-color: rgb(249, 252, 247);
+    border: 1px solid rgb(133, 235, 107);
+    border-radius: 5px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
