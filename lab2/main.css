@@ -29,6 +29,10 @@ h1 {
 input, textarea, select {
     font-size: inherit;
 }
+.input{
+    margin: 0 auto;
+
+}
 .btn {
     display: block;
     height: 40px;
