@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    font-family: "Google Fonts", sans-serif;
+    background-color: rgb(210, 239, 248);
+}
+
+.header {
+    background-color: rgb(188, 233, 247);
+}
+.main-menu{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.main-menu{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 20px 0px;
+
+}
+.main-menu a{
+    text-decoration: none; 
+    color: rgb(0, 0, 0);
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.block-f{
+    display: flex; 
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+.bibliot{
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.book{
+    display: flex; 
+    flex-flow: row wrap;
+}
+.book img{
+    height: 180px;
+
+    margin: 0 auto;
+    background-color: rgb(252, 250, 150);
+}
+
+.form-read{
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.form-comment{
+    display: flex; 
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.about-book{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.shrift {
+    font-size: 1rem;
+    /* font-weight:700; */
+    /* padding: 20px 0px; */
+
+}
+
+.footer{
+    background-color: rgb(252, 250, 144);
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+.me{
+    padding-left: 10px;
+}
+.contact {
+    padding-right: 10px;
+      
+}
+.btn {
+    display: block;
+    height: 40px;
+    width: 150px;
+    margin: 0 auto;
+    background-color: rgb(249, 252, 247);
+    border: 1px solid rgb(133, 235, 107);
+    border-radius: 5px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
