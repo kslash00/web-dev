@@ -22,6 +22,9 @@ body{
     text-decoration: none; 
     color: rgb(0, 0, 0);
     margin-right: 10px;
+    padding: 10px;
+    border: 5px solid rgb(241, 249, 255);
+    border-radius: 5px;
 }
 
 .container {
@@ -29,27 +32,62 @@ body{
     flex-flow: column wrap;
     justify-content: space-around;
 }
+h1 {
+    text-align:  center;
+}
+.what{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+}
+.reason{
+    display: flex;
+    width: 500px;
+    align-items: center;
+}
+
+.reason-img {
+    display: flex; 
+    flex-flow: row wrap;
+}
+.reason-img img{
+    height: 250px;
+    margin: 0 auto;
+    background-color: rgb(252, 250, 150);
+    /* border: 1px solid rgb(133, 235, 107); */
+    border-radius: 30px;
+}
 
 .block-f{
     display: flex; 
     flex-flow: column wrap;
     justify-content: space-between;
+    border: 5px solid rgb(241, 249, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
 }
 .bibliot{
     display: flex; 
     flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: space-around;
+
+    
 }
 .book{
     display: flex; 
     flex-flow: row wrap;
+    padding-top: 10px;
 }
 .book img{
     height: 180px;
-
     margin: 0 auto;
-    background-color: rgb(252, 250, 150);
+    
+    border: 3px solid rgb(112, 61, 3);
+    border-radius: 10px;
 }
 
 .form-read{
@@ -78,7 +116,7 @@ body{
 }
 
 .footer{
-    background-color: rgb(252, 250, 144);
+    background-color: rgb(188, 233, 247);
     display: flex; 
     flex-flow: row wrap;
     justify-content: space-between;
@@ -93,13 +131,13 @@ body{
 }
 .btn {
     display: block;
-    height: 40px;
+    height: 30px;
     width: 150px;
-    margin: 0 auto;
+    margin: 10px auto;
     background-color: rgb(249, 252, 247);
-    border: 1px solid rgb(133, 235, 107);
-    border-radius: 5px;
-    font-size: 20px;
+    border: 3px solid rgb(188, 233, 247);
+    border-radius: 10px;
+    font-size: 15px;
     color: black;
-    font-weight: bold;
+
 }
