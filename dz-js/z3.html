@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        function minDigit(x) { //возвращает наименьшую цифру целого неотрицательного числа x
+            let min = 10;
+            if (x == 0) return 0;
+            while (x > 0) {
+                if (min > x % 10) min = x % 10;
+                x = (x-(x % 10)) / 10;
+            }
+            return min;
+
+        }
+        let x = +prompt("x", '');
+        if (x > 0 && x % 1 == 0)
+            alert(minDigit(x))
+
+
+
+    </script>
+
+</body>
+
+</html>

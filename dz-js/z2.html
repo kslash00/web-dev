@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        function  gcd(x) { //НОД
+            let x = 1;
+            while (1) {
+
+                if (a > b) {
+                    if (a % b == 0) return x = b;
+                    else a = (a % b);
+                }
+                else {
+                    if (b % a == 0) return x = a;
+                    else b = (b % a);
+
+                }
+
+            }
+
+
+        }
+        let a = +prompt("a", '');
+        let b = +prompt("b", '');
+        if (a >= 0 && b >= 0)
+            alert(gcd(a, b))
+        
+
+
+    </script>
+
+</body>
+
+</html>
