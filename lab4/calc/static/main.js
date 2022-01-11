@@ -37,14 +37,14 @@ function tokenize(str) {
         if (isDigit(char) || char == '.') {
             lastNumber += char;
         } else {
-            if(lastNumber.length > 0) {
+            if (lastNumber.length > 0) {
                 tokens.push(lastNumber);
                 lastNumber = '';
             }
-        } 
+        }
         if (isOperation(char) || char == '(' || char == ')') {
             tokens.push(char);
-        } 
+        }
     }
     if (lastNumber.length > 0) {
         tokens.push(lastNumber);
@@ -77,7 +77,7 @@ function compile(str) {
         } else if (token == '(') {
             stack.push(token);
         } else if (token == ')') {
-            while (stack.length > 0 && stack[stack.length-1] != '(') {
+            while (stack.length > 0 && stack[stack.length - 1] != '(') {
                 out.push(stack.pop());
             }
             stack.pop();
@@ -98,6 +98,42 @@ function compile(str) {
 // (https://ru.wikipedia.org/wiki/Обратная_польская_запись#Вычисления_на_стеке).
 
 function evaluate(str) {
+    let stack = [];
+    str = compile(str);
+    for (let i = 0; i < str.length; i++) {
+        let a = '';
+        while (str[i] != ' ' && str[i] != '*' && str[i] != '+' && str[i] != '-' && str[i] != '/') {
+            a = a + str[i];
+            i++;
+        }
+        stack.push(a);
+        
+
+        /* if (str[i] != ' ' && str[i] != '*' && str[i] != '+' && str[i] != '-' && str[i] != '/')
+             stack.push(str[i]);
+ */
+        if (str[i] == '*') {
+            stack[0] = stack[0] * stack[1];
+            stack.pop();
+        }
+
+        if (str[i] == '+') {
+            stack[0] = Number(stack[0]) + Number(stack[1]);
+            stack.pop();
+        }
+
+        if (str[i] == '-') {
+            stack[0] = Number(stack[0]) - Number(stack[1]);
+            stack.pop();
+        }
+
+        if (str[i] == '/') {
+            stack[0] = stack[0] / stack[1];
+            stack.pop();
+        }
+    }
+    stack[0] = Number(stack[0]).toFixed(2);
+    return stack[0];
     // your code here
 }
 
@@ -117,10 +153,27 @@ function evaluate(str) {
 
 function clickHandler(event) {
     // your code here
+    let equation = document.getElementById('equation');
+    if (event.target.className == 'key digit' || event.target.className == 'key operation' || event.target.className == 'key bracket') {
+
+        equation.innerHTML = equation.innerHTML + event.target.innerHTML;
+    }
+
+    if (event.target.className == 'key clear') {
+        equation.innerHTML = '';
+
+
+    }
+
+    if (event.target.className == 'key result') {
+        equation.innerHTML = evaluate(equation.innerHTML);
+    }
 }
 
 
 // Назначьте нужные обработчики событий.
 window.onload = function () {
     // your code here
+    let buttons = document.getElementById('buttons');
+    buttons.onclick = clickHandler;
 }
