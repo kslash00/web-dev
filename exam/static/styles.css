@@ -3,3 +3,19 @@
     height: 6px;
     background-color: rgb(245, 201, 135);
 }
+
+.navbar {
+    padding: 10px;
+    background-color:  white;
+    border-bottom: 1px solid rgb(245, 201, 135);
+    padding-top: 0px;
+}
+
+.poisk{
+    border: 3px solid rgb(245, 201, 135);
+    border-radius: 10px;
+}
+.poisk-res{
+    border: 3px solid rgb(245, 201, 135);
+    border-radius: 10px;
+}
