@@ -6,8 +6,6 @@ let restaurantsJson;
 window.onload = function () {
     getRestaurants().then(renderRecords);
     document.querySelector("#find").onclick = filterRecords;
-    document.querySelector("#where").onclick = clickHandler;
-    
   };
   
   async function getRestaurants() {
@@ -114,14 +112,6 @@ window.onload = function () {
     for (let value of unarr) {
       let qwe = document.createElement("option");
       qwe.innerHTML = value;
-      document.querySelector("#SocialPrivileges").appendChild(qwe);
+      document.querySelector("#socialPrivileges").appendChild(qwe);
     }
   }
-
-
-
-  function clickHandler(event) {
-    let lanch = document.getElementById('lanch');
-    lanch.innerHTML="66";
-    
-}
