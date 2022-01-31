@@ -1,6 +1,10 @@
+body{
+    background-color: rgb(249, 220, 255);
+}
+
 .heading-line{
-    width: 70%;
-    height: 6px;
+    width: 95%;
+    height: 4px;
     background-color: rgb(245, 201, 135);
 }
 
@@ -18,4 +22,11 @@
 .poisk-res{
     border: 3px solid rgb(245, 201, 135);
     border-radius: 10px;
+}
+.modal-menu{
+    width: 100%;
+    height: auto;
+}
+.pagination li {
+    color: rgb(245, 201, 135);
 }

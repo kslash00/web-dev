@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(245, 225, 212);
+}
+.navbar{
+    background-color: rgb(255, 255, 255);
+}
+
+footer{
+    background-color: rgb(247, 209, 184);
+}
+.book-car{
+    background-color: rgb(247, 209, 184);
+    border-radius: 20%;
+
+}
+.opis {
+    background-color: rgb(247, 209, 184);
+    border-radius: 20%;
+}
+.peim {
+    background-color: rgb(247, 209, 184);
+    border-radius: 20%;
+}
+.contacts{
+    background-color: rgb(247, 209, 184);
+    border-radius: 20%;
+}
