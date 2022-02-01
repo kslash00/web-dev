@@ -17,7 +17,15 @@ window.onload = function () {
     restaurantsJson = json;
     return json;
   }
-  
+
+   function renderRecords(records) {
+    let restaurantTable = document.querySelector("tbody");
+    for (let i = 0; i < 5; i++) {
+      restaurantTable.append(createRestaurantTableItem(records[i]));
+    }
+    getFilter();
+  }
+
   function createRestaurantTableItem(record) {
     let item = document.querySelector("#tr-template").cloneNode(true);
     item.classList.remove("d-none");
@@ -29,45 +37,8 @@ window.onload = function () {
     return item;
   }
   
-  function renderRecords(records) {
-    let restaurantTable = document.querySelector("tbody");
-    for (let i = 0; i < 5; i++) {
-      restaurantTable.append(createRestaurantTableItem(records[i]));
-    }
-    getFilter();
-  }
-  
-  
-  
-  function filterRecords() {
-    let selectedAdm = document.getElementById("area").value;
-    let selectedDistrict = document.getElementById("district").value;
-    let selectedType = document.getElementById("type").value;
-    let selectedSocialPrivileges = document.getElementById("socialPrivileges").value;
-  
-    let restaurantTable = document.querySelector("tbody");
-    while (restaurantTable.children.length > 1) {
-      restaurantTable.removeChild(restaurantTable.lastChild);
-    }
-  
-    for (let i = 0; i < restaurantsJson.length; i++) {
-      if (
-        (selectedAdm == "Не выбрано" ||
-          selectedAdm == restaurantsJson[i].admArea) &&
-        (selectedDistrict == "Не выбрано" ||
-          selectedDistrict == restaurantsJson[i].district) &&
-        (selectedSocialPrivileges == "Не выбрано" ||
-          selectedSocialPrivileges == restaurantsJson[i].socialPrivileges) &&
-        (selectedType == "Не выбрано" ||
-          selectedType == restaurantsJson[i].typeObject)
-      ) {
-        restaurantTable.append(createRestaurantTableItem(restaurantsJson[i]));
-      }
-    }
-  }
-  
   function getFilter() {
-    var arrType = [];
+    let arrType = [];
     for (let i = 0; i < restaurantsJson.length; i++) {
       arrType.push(restaurantsJson[i].typeObject);
     }
@@ -115,3 +86,36 @@ window.onload = function () {
       document.querySelector("#socialPrivileges").appendChild(qwe);
     }
   }
+
+ 
+  
+  
+  
+  function filterRecords() {
+    let selectedAdm = document.getElementById("area").value;
+    let selectedDistrict = document.getElementById("district").value;
+    let selectedType = document.getElementById("type").value;
+    let selectedSocialPrivileges = document.getElementById("socialPrivileges").value;
+  
+    let restaurantTable = document.querySelector("tbody");
+    while (restaurantTable.children.length > 1) {
+      restaurantTable.removeChild(restaurantTable.lastChild);
+    }
+  
+    for (let i = 0; i < restaurantsJson.length; i++) {
+      if (
+        (selectedAdm == "Не выбрано" ||
+          selectedAdm == restaurantsJson[i].admArea) &&
+        (selectedDistrict == "Не выбрано" ||
+          selectedDistrict == restaurantsJson[i].district) &&
+        (selectedSocialPrivileges == "Не выбрано" ||
+          selectedSocialPrivileges == restaurantsJson[i].socialPrivileges) &&
+        (selectedType == "Не выбрано" ||
+          selectedType == restaurantsJson[i].typeObject)
+      ) {
+        restaurantTable.append(createRestaurantTableItem(restaurantsJson[i]));
+      }
+    }
+  }
+  
+ 
